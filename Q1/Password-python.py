@@ -1,7 +1,7 @@
+
 import re
 
 def check_password_strength(password):
-   
     has_min_length = False
     has_uppercase = False
     has_lowercase = False
@@ -9,7 +9,7 @@ def check_password_strength(password):
     has_special_char = False
     feedback_messages = []
 
-  if len(password) >= 8:
+    if len(password) >= 8:
         has_min_length = True
     else:
         feedback_messages.append("Password must be at least 8 characters long.")
@@ -29,13 +29,12 @@ def check_password_strength(password):
     else:
         feedback_messages.append("Password must contain at least one digit.")
 
-special_characters = r'[!@#$%^&*()_+{}\[\]:;"\'<>,.?/~`\-=\\|]'
+    special_characters = r'[!@#$%^&*()_+{}\[\]:;"\'<>,.?/~`\-=\\|]'
     if re.search(special_characters, password):
         has_special_char = True
     else:
         feedback_messages.append("Password must contain at least one special character (!@#$%^&* etc.).")
 
-  
     is_strong = (has_min_length and has_uppercase and has_lowercase and has_digit and has_special_char)
 
     if is_strong:
@@ -47,7 +46,7 @@ special_characters = r'[!@#$%^&*()_+{}\[\]:;"\'<>,.?/~`\-=\\|]'
         for msg in feedback_messages:
             print(f"- {msg}")
 
-    return is_strong
+    return is_strong  
 
 # Main script to take user input
 if __name__ == "__main__":
@@ -57,7 +56,7 @@ if __name__ == "__main__":
         if user_password.lower() == 'quit':
             print("Exiting password checker. Goodbye!")
             break
-        
+
         # Call the function to check strength and print feedback
         check_password_strength(user_password)
-        print("-" * 30) # Separator for next input
+        print("-" * 30)

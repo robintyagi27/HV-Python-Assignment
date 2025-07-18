@@ -1,8 +1,7 @@
 import re
 
 def check_password_strength(password):
-  
-  
+   
     has_min_length = False
     has_uppercase = False
     has_lowercase = False
@@ -10,8 +9,7 @@ def check_password_strength(password):
     has_special_char = False
     feedback_messages = []
 
-   
-    if len(password) >= 8:
+  if len(password) >= 8:
         has_min_length = True
     else:
         feedback_messages.append("Password must be at least 8 characters long.")
@@ -31,8 +29,7 @@ def check_password_strength(password):
     else:
         feedback_messages.append("Password must contain at least one digit.")
 
-
-    special_characters = r'[!@#$%^&*()_+{}\[\]:;"\'<>,.?/~`\-=\\|]'
+special_characters = r'[!@#$%^&*()_+{}\[\]:;"\'<>,.?/~`\-=\\|]'
     if re.search(special_characters, password):
         has_special_char = True
     else:

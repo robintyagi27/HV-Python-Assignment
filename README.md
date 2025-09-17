@@ -1,13 +1,9 @@
 Here’s a well-structured documentation in **Markdown (.md)** format for your **Password Strength Checker** script:
-
 ---
-
-# 🔐 Password Strength Checker
+#  Password Strength Checker
 
 This Python script checks the strength of a given password based on multiple security criteria and provides feedback to help users improve weak passwords.
-
 ---
-
 ## 📋 Features
 
 * Ensures password has a **minimum length** (8 characters).
@@ -27,7 +23,7 @@ This Python script checks the strength of a given password based on multiple sec
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ```
 password_checker.py   # Main script

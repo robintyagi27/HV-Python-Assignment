@@ -4,7 +4,7 @@ Here’s a well-structured documentation in **Markdown (.md)** format for your *
 
 This Python script checks the strength of a given password based on multiple security criteria and provides feedback to help users improve weak passwords.
 ---
-## 📋 Features
+## Features
 
 * Ensures password has a **minimum length** (8 characters).
 * Requires at least **one uppercase letter**.
@@ -16,7 +16,7 @@ This Python script checks the strength of a given password based on multiple sec
 
 ---
 
-## 🛠️ Requirements
+##  Requirements
 
 * Python 3.x
 * Standard library (`re` for regular expressions)
@@ -64,6 +64,7 @@ Password Strength: STRONG
 Your password meets all the required criteria.
 ------------------------------
 ```
+<img width="601" height="237" alt="image" src="https://github.com/user-attachments/assets/bb83d406-582d-4ad2-95bd-fd9fad61d63a" />
 
 ---
 

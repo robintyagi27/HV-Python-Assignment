@@ -146,6 +146,7 @@ Current CPU usage: 15.2%
 Current CPU usage: 27.8%
 Alert! CPU usage exceeds threshold: 82.5%
 Current CPU usage: 45.6%
+<img width="336" height="254" alt="image" src="https://github.com/user-attachments/assets/e626e021-610d-4961-9583-c3a6bb879827" />
 
 Code Overview
 Function: monitor_cpu_health(threshold_percent=80, interval_seconds=2)

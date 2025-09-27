@@ -131,7 +131,7 @@ If usage crosses the threshold, an alert will appear.
 
 Press Ctrl + C to stop monitoring.
 
-⚙️ Configuration
+Configuration
 
 You can modify the default values directly in the script or pass them via function call:
 

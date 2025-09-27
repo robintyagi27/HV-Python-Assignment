@@ -89,6 +89,7 @@ Your password meets all the required criteria.
   * Prevent dictionary words or usernames.
   * Use password entropy calculations.
   * Integrate with libraries like `zxcvbn`.
+
  
 
 CPU Health Monitor
@@ -130,7 +131,7 @@ If usage crosses the threshold, an alert will appear.
 
 Press Ctrl + C to stop monitoring.
 
-Configuration
+⚙️ Configuration
 
 You can modify the default values directly in the script or pass them via function call:
 
@@ -146,7 +147,6 @@ Current CPU usage: 15.2%
 Current CPU usage: 27.8%
 Alert! CPU usage exceeds threshold: 82.5%
 Current CPU usage: 45.6%
-<img width="336" height="254" alt="image" src="https://github.com/user-attachments/assets/e626e021-610d-4961-9583-c3a6bb879827" />
 
 Code Overview
 Function: monitor_cpu_health(threshold_percent=80, interval_seconds=2)
@@ -170,3 +170,15 @@ Error Handling:
 KeyboardInterrupt → Stops monitoring gracefully.
 
 Other exceptions → Displays error message.
+
+Notes
+
+psutil.cpu_percent(interval) blocks for the given interval and gives a smoothed average over that period.
+
+The script is intended for local monitoring. For production or server monitoring, consider integrating with:
+
+Logging frameworks
+
+System monitoring tools (Prometheus, Grafana, etc.)
+
+Notification systems (Slack, Email, etc.)

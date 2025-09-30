@@ -92,11 +92,11 @@ Your password meets all the required criteria.
 
  
 
-CPU Health Monitor
+## CPU Health Monitor
 
 This Python script uses the psutil library to monitor CPU usage in real-time and triggers alerts when the usage exceeds a defined threshold.
 
-Features
+## Features
 
 Continuously monitors CPU usage.
 
@@ -108,7 +108,7 @@ Configurable monitoring interval in seconds (default: 2s).
 
 Gracefully stops with Ctrl + C.
 
-Requirements
+## Requirements
 
 Python 3.x
 
@@ -116,7 +116,7 @@ Install psutil:
 
 pip install psutil
 
-Usage
+## Usage
 
 Save the script as cpu_monitor.py.
 
@@ -131,7 +131,7 @@ If usage crosses the threshold, an alert will appear.
 
 Press Ctrl + C to stop monitoring.
 
-Configuration
+## Configuration
 
 You can modify the default values directly in the script or pass them via function call:
 
@@ -140,18 +140,20 @@ MONITOR_INTERVAL = 2  # Set interval between checks (seconds)
 
 monitor_cpu_health(threshold_percent=CPU_THRESHOLD, interval_seconds=MONITOR_INTERVAL)
 
-Example Run
+## Example Run
 Monitoring CPU usage... (Alert threshold: 80%)
 Press Ctrl+C to stop monitoring.
 Current CPU usage: 15.2%
 Current CPU usage: 27.8%
 Alert! CPU usage exceeds threshold: 82.5%
 Current CPU usage: 45.6%
+<img width="347" height="294" alt="image" src="https://github.com/user-attachments/assets/945adc59-ede6-4207-83a8-951136ccf540" />
 
-Code Overview
+
+## Code Overview
 Function: monitor_cpu_health(threshold_percent=80, interval_seconds=2)
 
-Parameters:
+## Parameters:
 
 threshold_percent (int) → CPU usage limit for alerts.
 
@@ -171,7 +173,7 @@ KeyboardInterrupt → Stops monitoring gracefully.
 
 Other exceptions → Displays error message.
 
-Notes
+## Notes
 
 psutil.cpu_percent(interval) blocks for the given interval and gives a smoothed average over that period.
 

@@ -185,3 +185,90 @@ Logging frameworks
 System monitoring tools (Prometheus, Grafana, etc.)
 
 Notification systems (Slack, Email, etc.)
+
+
+# File Backup Utility
+
+This Python script provides a simple yet effective way to back up files from a source directory to a destination directory. It handles conflicts by renaming duplicate files with timestamps and generates a summary report of the backup process.
+
+# Features
+
+ Copies all files from a source directory to a destination directory.
+
+ Automatically creates the destination directory if it doesn’t exist.
+
+ Handles filename conflicts by appending a timestamp (e.g., file_20250927_142530.txt).
+
+ Logs skipped items (non-files such as subdirectories).
+
+ Provides a summary of copied, skipped, and error files.
+
+## Requirements
+
+Python 3.x
+
+Standard library modules only (os, shutil, sys, datetime) — no external dependencies.
+
+## Usage
+
+Save the script as backup.py.
+
+Run it from the terminal with the following syntax:
+
+python backup.py <source_directory> <destination_directory>
+
+
+Example:
+
+python backup.py /home/user/Documents /home/user/Backups
+
+## Example Run
+Starting backup from '/home/user/Documents' to '/home/user/Backups'...
+Destination directory '/home/user/Backups' does not exist. Creating it...
+Destination directory created successfully.
+Copied: 'report.docx' to '/home/user/Backups/report.docx'
+Conflict: 'data.csv' already exists. Saving as 'data_20250927_143501.csv'
+Copied: 'data.csv' to '/home/user/Backups/data_20250927_143501.csv'
+Skipped: 'projects' (not a file or is a directory).
+
+Backup process completed.
+Summary: Copied 2 files, Skipped 1 items, Encountered 0 errors.
+
+## Code Overview
+Function: backup_files(source_dir, destination_dir)
+
+## Parameters:
+
+source_dir → Path to the directory containing files to back up.
+
+destination_dir → Path to the directory where files will be copied.
+
+Process:
+
+Validates source and destination paths.
+
+Creates destination directory if missing.
+
+Iterates through files in source:
+
+Copies files.
+
+Renames duplicates with a timestamp.
+
+Skips non-file entries.
+
+Prints a summary of operations.
+
+## Notes
+
+Subdirectories inside the source are skipped — only top-level files are copied.
+
+The script uses shutil.copy2() to preserve metadata (timestamps, permissions).
+
+To extend functionality, you could:
+
+Add recursive copying for subdirectories.
+
+Include logging to a file.
+
+Compress backups into .zip or .tar.gz.

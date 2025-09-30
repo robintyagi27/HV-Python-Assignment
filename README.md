@@ -147,6 +147,7 @@ Current CPU usage: 15.2%
 Current CPU usage: 27.8%
 Alert! CPU usage exceeds threshold: 82.5%
 Current CPU usage: 45.6%
+
 <img width="347" height="294" alt="image" src="https://github.com/user-attachments/assets/945adc59-ede6-4207-83a8-951136ccf540" />
 
 
